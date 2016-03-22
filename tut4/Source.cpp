@@ -200,3 +200,37 @@ public:
 	}
 
 };
+
+int main()
+{
+	TicTacToe obj;
+	int count = 0;
+	obj.reset();
+	while (1)
+	{
+		count++;
+		obj.move();
+		obj.reset();
+		if (obj.gameover() == 'X')
+		{
+			cout << "X wins!" << endl;
+			break;
+		}
+		else
+		if (obj.gameover() == '0')
+		{
+			cout << "0 wins!" << endl;
+			break;
+		}
+		else
+		if
+			(obj.gameover() == 'l'&& count == 9)
+		{
+			cout << "It's a draw!" << endl;
+			break;
+		}
+		obj.change_Player();
+	}
+	
+	return 0;
+}
